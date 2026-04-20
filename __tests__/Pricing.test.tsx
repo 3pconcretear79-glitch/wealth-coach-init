@@ -5,7 +5,6 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-// Mock the PayPal SDK modules — use createElement instead of JSX in mock factory
 jest.mock("@paypal/react-paypal-js", () => ({
   PayPalScriptProvider: ({ children }: { children: React.ReactNode }) =>
     React.createElement("div", { "data-testid": "paypal-provider" }, children),
@@ -76,11 +75,7 @@ describe("Pricing Component", () => {
     fireEvent.click(cashappButtons[0]);
     expect(screen.getByText("$WealthCoach")).toBeInTheDocument();
     expect(screen.getByText("I've Sent the Payment")).toBeInTheDocument();
-    expect(
-      screen.getByText(
-        "Include your email in the note for account activation"
-      )
-    ).toBeInTheDocument();
+    expect(screen.getByText("Include your email in the note for account activation")).toBeInTheDocument();
   });
 
   it("shows success message after CashApp payment confirmation", () => {
@@ -88,9 +83,7 @@ describe("Pricing Component", () => {
     const cashappButtons = screen.getAllByText("Pay with Cash App");
     fireEvent.click(cashappButtons[0]);
     fireEvent.click(screen.getByText("I've Sent the Payment"));
-    expect(
-      screen.getByText("\u2713 Payment initiated \u2014 thank you!")
-    ).toBeInTheDocument();
+    expect(screen.getByText("\u2713 Payment initiated \u2014 thank you!")).toBeInTheDocument();
   });
 
   it("can go back from PayPal to payment selection", () => {

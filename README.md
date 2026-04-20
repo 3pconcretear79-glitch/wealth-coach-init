@@ -12,7 +12,6 @@ An AI-powered financial advisory platform built with Next.js 14, Tailwind CSS, a
 ## Getting Started
 
 ```bash
-cd app
 npm install
 cp .env.example .env.local  # Then add your Stripe keys
 npm run dev

@@ -6,8 +6,7 @@ const features = [
       </svg>
     ),
     title: "Portfolio Optimization",
-    description:
-      "AI analyzes your risk tolerance, goals, and market conditions to recommend optimal asset allocation strategies.",
+    description: "AI analyzes your risk tolerance, goals, and market conditions to recommend optimal asset allocation strategies.",
   },
   {
     icon: (
@@ -16,8 +15,7 @@ const features = [
       </svg>
     ),
     title: "24/7 AI Chat Advisor",
-    description:
-      "Ask any financial question anytime. Our AI provides instant, personalized advice based on your financial profile.",
+    description: "Ask any financial question anytime. Our AI provides instant, personalized advice based on your financial profile.",
   },
   {
     icon: (
@@ -26,8 +24,7 @@ const features = [
       </svg>
     ),
     title: "Bank-Level Security",
-    description:
-      "Your financial data is encrypted with AES-256 and never shared. SOC 2 compliant with regular security audits.",
+    description: "Your financial data is encrypted with AES-256 and never shared. SOC 2 compliant with regular security audits.",
   },
   {
     icon: (
@@ -36,8 +33,7 @@ const features = [
       </svg>
     ),
     title: "Real-Time Insights",
-    description:
-      "Stay ahead with real-time market analysis, trend detection, and actionable investment signals tailored to you.",
+    description: "Stay ahead with real-time market analysis, trend detection, and actionable investment signals tailored to you.",
   },
 ];
 
@@ -46,28 +42,17 @@ export default function Features() {
     <section id="features" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Intelligent Wealth Management
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold">Intelligent Wealth Management</h2>
           <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-            Powered by cutting-edge AI models trained on decades of financial data
-            and market analysis.
+            Powered by cutting-edge AI models trained on decades of financial data and market analysis.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, i) => (
-            <div
-              key={i}
-              className="group rounded-2xl border border-gray-800 bg-gray-900/50 p-6 transition-all hover:border-gold-500/30 hover:bg-gray-900"
-            >
-              <div className="mb-4 inline-flex items-center justify-center rounded-lg bg-gold-500/10 p-3 text-gold-500 group-hover:bg-gold-500/20 transition-colors">
-                {feature.icon}
-              </div>
+            <div key={i} className="group rounded-2xl border border-gray-800 bg-gray-900/50 p-6 transition-all hover:border-gold-500/30 hover:bg-gray-900">
+              <div className="mb-4 inline-flex items-center justify-center rounded-lg bg-gold-500/10 p-3 text-gold-500 group-hover:bg-gold-500/20 transition-colors">{feature.icon}</div>
               <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">
-                {feature.description}
-              </p>
+              <p className="text-sm text-gray-400 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

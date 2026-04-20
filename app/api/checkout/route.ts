@@ -25,8 +25,6 @@ export async function POST(req: NextRequest) {
           { status: 422 }
         );
       }
-      // PayPal checkout is handled client-side via the PayPal JS SDK.
-      // This endpoint confirms the server acknowledges the PayPal method.
       return NextResponse.json({
         method: "paypal",
         message: "Use client-side PayPal SDK for checkout",
@@ -58,7 +56,6 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Dynamic import to avoid build errors when stripe package is absent
     const Stripe = (await import("stripe")).default;
     const stripe = new Stripe(secretKey, { apiVersion: "2023-10-16" });
 
