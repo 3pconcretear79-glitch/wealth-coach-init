@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { PayPalProviderWrapper } from "@/components/PayPalProviderWrapper";
 
 export const metadata: Metadata = {
   title: "AI Wealth Advisor — Smart Financial Guidance",
@@ -14,7 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <PayPalProviderWrapper>{children}</PayPalProviderWrapper>
+      </body>
     </html>
   );
 }
