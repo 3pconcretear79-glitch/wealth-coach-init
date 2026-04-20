@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { PayPalButtons } from "@paypal/react-paypal-js";
 
-const CASHAPP_TAG = "$WealthCoach";
+const CASHAPP_TAG = "$RAP0379";
 
 const plans = [
   {
@@ -164,7 +164,7 @@ export default function Pricing() {
                     /* Payment success */
                     <div className="text-center py-3 rounded-lg bg-green-900/40 border border-green-600/40">
                       <p className="text-green-400 font-semibold text-sm">
-                        \u2713 Payment initiated \u2014 thank you!
+                        ✓ Payment initiated — thank you!
                       </p>
                     </div>
                   ) : state.method === "select" ? (
@@ -206,7 +206,7 @@ export default function Pricing() {
                               intent: "CAPTURE",
                               purchase_units: [
                                 {
-                                  description: `AI Wealth Advisor \u2014 ${plan.name} Plan`,
+                                  description: `AI Wealth Advisor — ${plan.name} Plan`,
                                   amount: {
                                     currency_code: "USD",
                                     value: plan.priceValue.toFixed(2),
@@ -237,7 +237,7 @@ export default function Pricing() {
                         }
                         className="w-full text-sm text-gray-500 hover:text-gray-300 transition-colors"
                       >
-                        \u2190 Back to payment options
+                        ← Back to payment options
                       </button>
                     </div>
                   ) : (
@@ -275,7 +275,7 @@ export default function Pricing() {
                         }
                         className="w-full text-sm text-gray-500 hover:text-gray-300 transition-colors"
                       >
-                        \u2190 Back to payment options
+                        ← Back to payment options
                       </button>
                     </div>
                   )}

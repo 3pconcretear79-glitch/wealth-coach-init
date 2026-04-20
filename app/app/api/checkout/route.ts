@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
 
     // Handle CashApp checkout
     if (paymentMethod === "cashapp") {
-      const cashTag = process.env.CASHAPP_CASHTAG || "$WealthCoach";
+      const cashTag = process.env.CASHAPP_CASHTAG || "$RAP0379";
       return NextResponse.json({
         method: "cashapp",
         cashTag,
