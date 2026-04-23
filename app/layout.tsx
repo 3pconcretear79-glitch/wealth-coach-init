@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { PayPalProviderWrapper } from "@/components/PayPalProviderWrapper";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "AI Wealth Advisor — Smart Financial Guidance",
