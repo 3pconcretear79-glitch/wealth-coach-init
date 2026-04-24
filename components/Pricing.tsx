@@ -118,7 +118,7 @@ export default function Pricing() {
                     </>
                   ) : state.method === "paypal" ? (
                     <div className="space-y-3">
-                      <PayPalButtons style={{ layout: "vertical", color: "gold", shape: "rect", label: "subscribe" }} createOrder={(_data: Record<string, unknown>, actions: { order: { create: (opts: Record<string, unknown>) => Promise<string> } }) => actions.order.create({ purchase_units: [{ amount: { value: plan.priceValue.toString() } }] })} onApprove={async () => { setState(plan.name, { success: true, method: "select" }); }} />
+                      <PayPalButtons style={{ layout: "vertical", color: "gold", shape: "rect", label: "subscribe" }} createOrder={(_data, actions) => actions.order.create({ intent: "CAPTURE", purchase_units: [{ amount: { currency_code: "USD", value: plan.priceValue.toString() } }] })} onApprove={async () => { setState(plan.name, { success: true, method: "select" }); }} />
                       <button onClick={() => setState(plan.name, { method: "select" })} className="w-full text-xs text-gray-500 hover:text-gray-300 transition-colors">← Back to payment options</button>
                     </div>
                   ) : state.method === "cashapp" ? (
@@ -128,7 +128,7 @@ export default function Pricing() {
                         <p className="text-gray-400 text-xs mt-1">Send <strong className="text-white">${plan.priceValue}</strong> to the CashTag above</p>
                         <p className="text-gray-500 text-xs mt-2">Include your email in the note for account activation</p>
                       </div>
-                      <button onClick={() => setState(plan.name, { success: true, method: "select" })} className="w-full py-2.5 rounded-lg font-semibold text-sm bg-[#00D632] hover:bg-[#00C02E] text-white transition-all">I've Sent the Payment</button>
+                      <button onClick={() => setState(plan.name, { success: true, method: "select" })} className="w.full py-2.5 rounded-lg font-semibold text-sm bg-[#00D632] hover:bg-[#00C02E] text-white transition-all">I've Sent the Payment</button>
                       <button onClick={() => setState(plan.name, { method: "select" })} className="w-full text-xs text-gray-500 hover:text-gray-300 transition-colors">← Back to payment options</button>
                     </div>
                   ) : null}
