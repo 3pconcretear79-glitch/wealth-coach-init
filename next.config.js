@@ -1,5 +1,6 @@
-// Force redeploy to fix 404
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
-
-module.exports = nextConfig
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+};
+module.exports = nextConfig;

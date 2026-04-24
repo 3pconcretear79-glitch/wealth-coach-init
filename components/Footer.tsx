@@ -8,13 +8,11 @@ export default function Footer() {
           </div>
           <span className="text-sm font-semibold">AI Wealth Advisor</span>
         </div>
-        <p className="text-xs text-gray-500">
-          © {new Date().getFullYear()} AI Wealth Advisor. For informational purposes only — not financial advice.
-        </p>
+        <p className="text-xs text-gray-500">For informational purposes only.</p>
         <div className="flex gap-6 text-xs text-gray-500">
-          <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>
-          <a href="#" className="hover:text-gray-300 transition-colors">Terms</a>
-          <a href="#" className="hover:text-gray-300 transition-colors">Contact</a>
+          <a href="#" className="hover:text-gray-300">Privacy</a>
+          <a href="#" className="hover:text-gray-300">Terms</a>
+          <a href="#" className="hover:text-gray-300">Contact</a>
         </div>
       </div>
     </footer>
