@@ -43,9 +43,7 @@ export default function Features() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold">Intelligent Wealth Management</h2>
-          <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-            Powered by cutting-edge AI models trained on decades of financial data and market analysis.
-          </p>
+          <p className="mt-4 text-gray-400 max-w-2xl mx-auto">Powered by cutting-edge AI models trained on decades of financial data and market analysis.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, i) => (

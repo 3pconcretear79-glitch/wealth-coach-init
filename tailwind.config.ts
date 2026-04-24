@@ -2,9 +2,9 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -22,14 +22,6 @@ const config: Config = {
           900: "#78350f",
           950: "#451a03",
         },
-      },
-      images: {
-        remotePatterns: [
-          {
-            protocol: "https",
-            hostname: "prefix.stripe.com",
-          },
-        ],
       },
     },
   },
