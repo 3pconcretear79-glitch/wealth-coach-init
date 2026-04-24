@@ -1,1 +1,3 @@
-ZXhwb3J0IGZ1bmN0aW9uIFBheVBhbFByb3ZpZGVyV3JhcHBlcih7IGNoaWxkcmVuIH0pIHsgcmV0dXJuID48ZGl2PntjaGlsZHJlbn08L2Rpdj47IH0K
+export function PayPalProviderWrapper({ children }: { children: React.ReactNode }) {
+  return <div>{children}</div>;
+}

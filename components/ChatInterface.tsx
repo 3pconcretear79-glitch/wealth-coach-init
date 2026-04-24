@@ -1,1 +1,2 @@
-Ly8gQ2hhdEludGVyZmFjZS50c3ggY29udGVudCAoa2VlcGluZyBpdCBzaW1wbGUgZm9yIG1vdmUpCmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7CmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIENoYXRJbnRlcmZhY2UoKSB7IHJldHVybiA8ZGl2PkNoYXQgRGVtbzwvZGl2PjsgfQo=
+import React from 'react';
+export default function ChatInterface() { return <div>Chat Demo</div>; }

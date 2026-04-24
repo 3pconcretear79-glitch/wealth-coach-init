@@ -1,1 +1,1 @@
-ZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gRm9vdGVyKCkgeyByZXR1cm4gPGRpdj5Gb290ZXI8L2Rpdj47IH0K
+export default function Footer() { return <div>Footer</div>; }

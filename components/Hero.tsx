@@ -1,1 +1,1 @@
-ZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gSGVybygpIHsgcmV0dXJuIDxkaXY+SGVybzwvZGl2PjsgfQo=
+export default function Hero() { return <div>Hero</div>; }

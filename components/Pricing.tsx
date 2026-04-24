@@ -1,1 +1,1 @@
-ZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gUHJpY2luZygpIHsgcmV0dXJuIDxkaXY+UHJpY2luZzwvZGl2PjsgfQo=
+export default function Pricing() { return <div>Pricing</div>; }
