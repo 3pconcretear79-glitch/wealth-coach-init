@@ -113,8 +113,8 @@ export default function ChatInterface() {
               </button>
             </div>
             <div className="flex gap-2 mt-3">
-              {["How should I invest $10k?", "Retirement planning tips", "Help me save more"].map((suggestion) => (
-                <button key={suggestion} onClick={() => setInput(suggestion)} className="text-xs text-gray-500 border border-gray-800 rounded-full px-3 py-1 hover:border-gold-500/30 hover:text-gray-300 transition-colors">{suggestion}</button>
+              {["How should I invest $10k?", "Retirement planning tips", "Help me save more"].map((q) => (
+                <button key={q} onClick={() => { setInput(q); }} className="text-xs px-3 py-1.5 rounded-full border border-gray-700 text-gray-400 hover:border-gold-500/50 hover:text-gold-400 transition-colors">{q}</button>
               ))}
             </div>
           </div>
