@@ -1,8 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const PAYPAL_CLIENT_ID = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID;
-const PAYPAL_CLIENT_SECRET = process.env.PAYPAL_CLIENT_SECRET;
-const PAYPAL_API_BASE = process.env.PAYPAL_API_BASE || "https://api-m.sandbox.paypal.com";
+const PAYPAL_CLIENT_ID =
+  process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID ||
+  "AXJZ3V8cdUCKMTBrSLrGUq7nx9r6Wtb2qVQpFbvDD3eyvstitOSxtq5srLvACd9LcNCicZ5ckk96Bi-y";
+
+const PAYPAL_CLIENT_SECRET =
+  process.env.PAYPAL_CLIENT_SECRET ||
+  "EMw8nXNUYhfpr4oJwzk7Otjglwb7KK4qor_9hj3hBh090dxIIol_O_197-l1WCBqB_jWlE3egZSRyF2Q";
+
+const PAYPAL_API_BASE =
+  process.env.PAYPAL_API_BASE || "https://api-m.paypal.com";
 
 async function getPayPalAccessToken(): Promise<string> {
   if (!PAYPAL_CLIENT_ID || !PAYPAL_CLIENT_SECRET) {
