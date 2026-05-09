@@ -6,7 +6,7 @@ const PAYPAL_CLIENT_ID =
 
 const PAYPAL_CLIENT_SECRET =
   process.env.PAYPAL_CLIENT_SECRET ||
-  "Aezw5yK4Uc_A7K7v1jpy1cy2NR6BflgnCi7vL1KbLZYOfV7VfFS08unYj8Q6uUr7YjB5SHRafsFaUQp_";
+  "EMw8nXNUYhfpr4oJwzk7Otjglwb7KK4qor_9hj3hBh090dxIIol_O_197-l1WCBqB_jWlE3egZSRyF2Q";
 
 const PAYPAL_API_BASE =
   process.env.PAYPAL_API_BASE || "https://api-m.paypal.com";
@@ -84,12 +84,10 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing planName" }, { status: 400 });
     }
 
-    // Capture the order server-side
     const captureData = await capturePayPalOrder(orderID) as Record<string, unknown>;
     const captureStatus = captureData.status as string;
 
     if (captureStatus === "COMPLETED") {
-      // Extract transaction details
       const purchaseUnits = captureData.purchase_units as Array<Record<string, unknown>>;
       const capture = ((purchaseUnits?.[0]?.payments as Record<string, unknown>)?.captures as Array<Record<string, unknown>>)?.[0];
       const transactionId = capture?.id || orderID;
@@ -97,7 +95,6 @@ export async function POST(req: NextRequest) {
       const currency = (capture?.amount as Record<string, unknown>)?.currency_code || "USD";
       const payerEmail = ((captureData.payer as Record<string, unknown>)?.email_address) || "unknown";
 
-      // Log verified transaction (placeholder for database)
       console.log("=== VERIFIED PAYPAL TRANSACTION ===");
       console.log(`Transaction ID: ${transactionId}`);
       console.log(`Order ID: ${orderID}`);
@@ -117,7 +114,6 @@ export async function POST(req: NextRequest) {
         currency,
       });
     } else {
-      // If not completed, try to get details
       const orderDetails = await getPayPalOrderDetails(orderID);
       console.log("PayPal order not completed:", JSON.stringify(orderDetails, null, 2));
 

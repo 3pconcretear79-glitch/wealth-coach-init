@@ -81,6 +81,18 @@ export default function Pricing() {
   return (
     <section id="pricing" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
+        {/* FOUNDER'S DEAL BANNER */}
+        <div className="mb-10 mx-auto max-w-3xl rounded-2xl border-2 border-amber-400/60 bg-gradient-to-r from-amber-500/20 via-yellow-500/10 to-amber-500/20 px-6 py-5 text-center shadow-lg shadow-amber-500/10">
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <span className="text-2xl">🔥</span>
+            <span className="text-xl md:text-2xl font-extrabold tracking-tight text-amber-300 uppercase">Founder&apos;s Deal</span>
+            <span className="text-2xl">🔥</span>
+          </div>
+          <p className="text-sm md:text-base text-amber-100/90 font-medium">
+            Lock in our <span className="font-bold text-white">Pro plan at just $19/mo</span> — available for a limited time only. Early supporters get this rate <span className="underline decoration-amber-400">for life</span>.
+          </p>
+        </div>
+
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold">Simple, Transparent Pricing</h2>
           <p className="mt-4 text-gray-400 max-w-2xl mx-auto">Start free and upgrade as your wealth grows. All plans include our core AI advisor.</p>
@@ -100,7 +112,7 @@ export default function Pricing() {
                 {plan.popular && (
                   <div className="mt-2 inline-flex items-center gap-1.5 bg-amber-500/15 border border-amber-500/40 rounded-full px-3 py-1">
                     <svg className="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                    <span className="text-amber-400 text-xs font-semibold">Limited Time Founder's Price</span>
+                    <span className="text-amber-400 text-xs font-semibold">Limited Time Founder&apos;s Price</span>
                   </div>
                 )}
                 <p className="mt-3 text-sm text-gray-400">{plan.description}</p>

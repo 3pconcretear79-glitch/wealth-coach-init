@@ -12,10 +12,8 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Validate CashApp name format (should start with $)
     const cleanCashAppName = cashAppName.startsWith("$") ? cashAppName : `$${cashAppName}`;
 
-    // Log verification submission (placeholder for database)
     console.log("=== CASHAPP VERIFICATION SUBMITTED ===");
     console.log(`CashApp Name: ${cleanCashAppName}`);
     console.log(`Transaction ID: ${transactionId}`);
