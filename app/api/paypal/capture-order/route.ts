@@ -6,7 +6,7 @@ const PAYPAL_CLIENT_ID =
 
 const PAYPAL_CLIENT_SECRET =
   process.env.PAYPAL_CLIENT_SECRET ||
-  "EMw8nXNUYhfpr4oJwzk7Otjglwb7KK4qor_9hj3hBh090dxIIol_O_197-l1WCBqB_jWlE3egZSRyF2Q";
+  "Aezw5yK4Uc_A7K7v1jpy1cy2NR6BflgnCi7vL1KbLZYOfV7VfFS08unYj8Q6uUr7YjB5SHRafsFaUQp_";
 
 const PAYPAL_API_BASE =
   process.env.PAYPAL_API_BASE || "https://api-m.paypal.com";
